@@ -8,7 +8,7 @@ Here are my complete professional work details about me. It will help you to kno
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yushi1007&layout=compact)](https://github.com/sarita105)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sarita105&layout=compact)](https://github.com/sarita105)
 
 
 
