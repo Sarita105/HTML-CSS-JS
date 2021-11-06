@@ -243,7 +243,8 @@ header{
         text-align: right;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 1.5em);
+        /* width: calc(100% + 1.5em); */
+        width: calc(100% + 4.5em);
     }
 }
 
@@ -338,12 +339,14 @@ header{
 }
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .portfolio__item {
     /* background-color: var(--clr-accent); */
     overflow: hidden;
+    width: 400px;
+    margin-left: 500px;
 }
 .portfolio__img {
     transition: 
@@ -381,6 +384,7 @@ header{
 .footer__link {
     /* font-size: var(--fs-h3); */
     font-weight: var(--fw-bold);
+    margin: 0 2em;
 }
 .footer__link:hover,
 -social-list__link:hover{
