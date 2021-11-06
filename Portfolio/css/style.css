@@ -420,3 +420,67 @@ header{
     margin-left: auto;
     margin-right: auto;
 }
+.portfolio__item{
+    text-decoration: none;
+}
+ .my-work-text{
+    color: var(--clr-light);
+    font-size: var(--fs-h3);
+}
+.container__face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__face .face {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: #ffcd00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__face .face:hover {
+    background: linear-gradient(180deg, #50d130, #ffcd00);
+}
+.container__face .face :before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+background: #b57700;
+transition: 0.5s;
+top: 100px;
+left: 60px;
+}
+
+.container__face .face .eyes {
+    position: relative;
+    top: 0;
+    display:flex;
+    flex-wrap: wrap;
+}
+.container__face .face .eyes .eye {
+    position: relative;
+   width: 80px;
+   height: 80px;
+   display: block;
+   margin: 0 15px;
+   background: #fff;
+   border-radius: 50%;
+}
+.container__face .face .eyes .eye:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+}
