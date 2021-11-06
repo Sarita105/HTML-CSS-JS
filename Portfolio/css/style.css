@@ -15,12 +15,15 @@
     --clr-light: rgb(184, 245, 207);
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
+    --clr-neon: #e016c5;
+    --clr-bg: hsl(323 21% 16%);
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+          --typewriterSpeed: 6s;
 }
 
 @media (min-width: 8000px) {
@@ -71,6 +74,50 @@ strong {
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
+}
+.neon-btn {
+    color: var(--clr-neon);
+    border: var(--clr-neon) .125em solid;
+    border-radius: 0.25em;
+    text-shadow: 
+    0 0 0.125em hsl(0 0% 100% / 0.5),
+    0 0 .25em var(--clr-neon);
+    box-shadow: inset 0 0 .5em 0 var(--clr-neon), 0 0 .5em 0 var(--clr-neon);
+    position: relative;
+}
+.neon-btn::before{
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: violet;
+    top: 120%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: .7;
+}
+.neon-btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.neon-btn:hover::after{
+    opacity: 1;
+}
+.neon-btn:hover,
+.neon-btn:focus{
+    background: var(--clr-neon);
+    color: var(--clr-accent);
 }
 .btn:hover{
     transform: scale(1.1);
@@ -127,7 +174,8 @@ header{
 }
 .nav{
     position: fixed;
-    background: var(--clr-dark);
+    /* background: var(--clr-dark); */
+    background: #0f5045;
     color: var(--clr-light);
     top:0;
     left:0;
@@ -209,6 +257,48 @@ header{
 .hamburger::before{top: 6px;}
 .hamburger::after{bottom: 6px;}
 /*intro*/
+    .letter-s {
+        color: var(--clr-neon);
+        font-family: "Source Code Pro", monospace;
+        position: absolute;
+        width: max-content;
+        top: 0;
+        left: 0;
+        background: var(--clr-light) ;
+    }
+    .letter-s::before,
+    .letter-s::after{
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    
+    }
+    .letter-s::before{
+        background: var(--clr-light);
+        animation: 
+        typewriter 4s var(--typewriterSpeed) steps(22) forwards;
+    }
+    .letter-s::after{
+       width: .125em;
+       background: var(--clr-neon);   
+        animation: 
+       typewriter 4s var(--typewriterSpeed) steps(22) forwards,
+       blink 1s 500ms steps(22) infinite;
+    }
+    @keyframes typewriter {
+        to {
+            left: 100%
+        }
+    }
+    @keyframes blink {
+        to {
+            background: transparent;
+        }
+    }
+    
 
 .intro {
     position: relative;
