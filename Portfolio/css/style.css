@@ -26,7 +26,7 @@
           --typewriterSpeed: 6s;
 }
 
-@media (min-width: 8000px) {
+@media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -419,8 +419,16 @@ header{
        /* grid-row: 1/-1;
        grid-column: 2; */
    }
+ 
 }
-
+@media (min-width: 1000px) {
+    .portfolio__item {
+        /* background-color: var(--clr-accent); */
+        /* overflow: hidden; */
+        width: 400px;
+        margin-left: 500px;
+    }
+}
 /*my work*/
 .my-work {
     background-color: var(--clr-dark);
@@ -435,8 +443,8 @@ header{
 .portfolio__item {
     /* background-color: var(--clr-accent); */
     overflow: hidden;
-    width: 400px;
-    margin-left: 500px;
+    /* width: 400px;
+    margin-left: 500px; */
 }
 .portfolio__img {
     transition: 
@@ -474,7 +482,7 @@ header{
 .footer__link {
     /* font-size: var(--fs-h3); */
     font-weight: var(--fw-bold);
-    margin: 0 2em;
+    margin: 0 3em;
 }
 .footer__link:hover,
 -social-list__link:hover{
